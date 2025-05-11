@@ -1,4 +1,5 @@
 document.addEventListener("DOMContentLoaded", function () {
+    
     const text = "Hi, I'm Haley"; // The text you want to display
     const speed = 100; // Typing speed in milliseconds
     let i = 0;
@@ -50,4 +51,8 @@ document.addEventListener("DOMContentLoaded", () => {
     faders.forEach(fader => {
       observer.observe(fader);
     });
+  });
+
+document.addEventListener("DOMContentLoaded", () => {
+    document.querySelector(".header-section").classList.add("visible");
   });
