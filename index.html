@@ -1,0 +1,137 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="icon" type="image/x-icon" href="haley-logo.jpg">
+    <script src="https://kit.fontawesome.com/b704c00148.js" crossorigin="anonymous"></script>
+    <link rel="stylesheet" href="style.css">
+    <title>Haley Higa</title>
+</head>
+
+<body>
+    <nav>
+        <div class="nav-container">
+          <div class="logo">
+            <a href="index.html">
+                <img src="haley-logo.jpg" alt="haley-logo">
+                <span>Haley Higa</span>
+             </a>
+          </div>
+          <ul class="nav-links">
+            <li><a href="#about" class="nav-link">About Me</a></li>
+            <li><a href="#projects" class="nav-link">Projects</a></li>
+            <li><a href="#contact" class="nav-link">Contact</a></li>
+            <li><a href="/haley-resume.pdf" target="_blank">Resume</a></li>
+
+          </ul>
+        </div>
+      </nav>
+
+    <div class="header-section">
+        <h1 id="typewriter"></h1>
+        <h2>A Computer Science Student at Utah Tech University</h2>
+        <h4>I develop projects in Python, Javascript, and C++</h4>
+        <a id="resume-button" href="/haley-resume.pdf" target="_blank">View Resume</a>
+        <a id="contact-button">Contact Me</a>
+    </div>
+
+
+    <div class="about-section" id="about">
+        <h1>About Me</h1>
+        <div class="about-content fade-in">
+          <img src="haley.png" alt="A picture of me" id="about-image">
+          <div class="about-text">
+            <h4>I'm a Computer Science major at Utah Tech University with a minor in Information Technology and a 3.91 GPA. My interests lie at the intersection of software engineering, data analytics, artificial intelligence, machine learning, and database systems. I've built a strong foundation in Python, SQL, and algorithm design, and I enjoy creating scalable, data-driven solutions that solve real-world problems.
+
+                I'm an AWS Certified Cloud Practitioner and CompTIA Security+ certified, which reflects my commitment to both cloud technologies and cybersecurity fundamentals. I'm currently seeking opportunities in software development, data engineering, or AI-focused roles where I can contribute meaningfully and continue growing in a fast-paced environment.
+                
+                Outside of tech, I enjoy snowboarding, fishing, and surfing—activities that have taught me focus, discipline, and adaptability, all of which I bring into my professional work. </h4>
+            <div class="skills-container">
+              <div>Python</div>
+              <div>Javascript</div>
+              <div>C++</div>
+              <div>SQL</div>
+              <div>Data Science</div>
+            </div>
+          </div>
+        </div>
+      </div>
+
+    <div class="projects-section" id="projects">
+    <h1>Projects</h1>
+
+    <div class="projects-menu">
+        <h4>Featured</h4>
+        <h4>AI</h4>
+        <h4>ML</h4>
+        <h4>Databases</h4>
+        <h4>Web</h4>
+        <h4>Graphics</h4>
+
+    </div>
+
+    <div class="projects-container">
+        <div class="project-card fade-in">
+          <img src="ai-pathfinder.png" alt="AI-Doghouse-Pathfinder">
+          <h3>AI Doghouse Pathfinder</h3>
+          <p>Utilizes A* Search Algorithm and Python Gymnasium</p>
+          <button href="https://github.com/haleyhiga/AI-Doghouse-Pathfinder" target="_blank">View Project</button>
+        </div>
+      
+        <div class="project-card fade-in">
+          <img src="neural-network.jpg" alt="Heart-Failure-Neural-Network">
+          <h3>Heart Failure Prediction Neural Network</h3>
+          <p>TensorFlow, Keras, Health Data Analysis</p>
+          <button href="https://github.com/haleyhiga/Heart-Failure-Prediction-Neural-Network">View Project</button>
+        </div>
+      
+        <div class="project-card fade-in">
+          <img src="social-network.jpg" alt="Mock-Social-Network">
+          <h3>Simulated Social Network</h3>
+          <p>SQLite, Bash, Python</p>
+          <button href="https://github.com/haleyhiga/Social-Network-Database">View Project</button>
+
+        </div>
+      </div>
+    
+    </div>
+
+
+
+    <div class="contact-section fade-in" id="contact">
+        <h1>Contact</h1>
+        <form action="https://formspree.io/f/xbloaryw" method="POST">
+          <div class="form-group">
+            <input type="text" name="name" id="name" placeholder="Your name" required>
+          </div>
+      
+          <div class="form-group">
+            <input type="email" name="email" id="email" placeholder="Your email" required>
+          </div>
+      
+          <div class="form-group">
+            <textarea name="message" id="message" rows="5" placeholder="Your message" required></textarea>
+          </div>
+      
+          <button type="submit">Send</button>
+        </form>
+      </div>
+
+
+
+    <footer>
+        <p>Contact Me: (808) 393-1398 | Mililani, HI 96789 | D00480762@utahtech.edu</p>
+        <a href="www.linkedin.com/in/haley-higa-9562072ab" target="_blank">
+            <i class="fa-brands fa-linkedin" style="font-size: 20px;"></i>
+          </a>
+
+          <a href="https://github.com/haleyhiga" target="_blank">
+            <i class="fa-brands fa-square-github" style="font-size: 20px;"></i>
+          </a>
+      </footer>
+
+<script src="app.js"></script>
+</body>
+</html>
