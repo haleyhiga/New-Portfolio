@@ -33,8 +33,8 @@ nav {
     gap: 0.5rem;
 }
 .logo a {
-    text-decoration: none; /* Removes underline */
-    color: white;          /* Ensures text is white */
+    text-decoration: none; 
+    color: white;          
     display: flex;
     align-items: center;
     gap: 0.5rem;
@@ -84,30 +84,49 @@ nav {
 
 /* HEADER SECTION */
 .header-section {
+    position: relative;
     max-width: 800px;
     margin: 3rem auto;
     padding: 2rem;
     background-color: rgba(128, 128, 128, 0.408);
-    box-shadow: 0 8px 20px rgba(0,0,0,0.1);
+    border: 2px solid white;
+    box-shadow: none;
     text-align: left;
     padding-bottom: 2em;
     opacity: 0;
     transform: translateY(20px);
     transition: opacity 0.8s ease, transform 0.8s ease;
+    z-index: 1;
 }
 
+.header-section::after {
+    content: "";
+    position: absolute;
+    top: 10px;
+    left: 10px;
+    width: 100%;
+    height: 100%;
+    background-color: #1a1a1a;
+    z-index: -1;
+    transition: top 0.3s ease, left 0.3s ease, opacity 0.3s ease;
+}
 .header-section.visible {
     opacity: 1;
     transform: translateY(0);
-  }
+}
 
+.header-section:hover::after {
+    top: 0;
+    left: 0;
+    opacity: 0;
+}
 #typewriter {
     font-weight: bold;
     color: white;
     text-align: center;
     white-space: nowrap;
     overflow: hidden;
-    border-right: 3px solid white; /* Cursor */
+    border-right: 3px solid white; 
     display: inline-block;
     animation: blink-caret 0.75s step-end infinite;
 }
@@ -133,6 +152,7 @@ nav {
 }
 
 #contact-button {
+    text-decoration: none;
     background-color: grey;
     color: black;
     border-radius: 4px;
@@ -163,6 +183,10 @@ nav {
     text-align: left;
     padding-bottom: 5.5em;
     padding-top: 5.5em;
+    border-top: 0.1px solid white;
+    border-bottom: 0.1px solid white;
+    position: relative;
+    z-index: 1;
 }
 
 .about-content {
@@ -212,6 +236,7 @@ nav {
     text-align: left;
     padding-bottom: 5.5em;
     padding-top: 5.5em;
+    border-bottom: 0.1px solid white;
 }
 
 .projects-menu {
@@ -264,7 +289,8 @@ nav {
     font-size: 0.95rem;
 }
 
-.project-card button {
+.project-card a {
+    text-decoration: none;
     background-color: grey;
     color: black;
     border-radius: 4px;
@@ -273,9 +299,10 @@ nav {
     text-transform: uppercase;
     cursor: pointer;
     padding: 0.5rem 1rem;
+    font-weight: bold;
 }
 
-.project-card button:hover {
+.project-card a:hover {
     transform: scale(1.04);
     box-shadow: 0 8px 20px rgba(0, 0, 0, 0.3);
     font-weight: bold;
