@@ -7,6 +7,7 @@
     <link rel="icon" type="image/x-icon" href="haley-logo.jpg">
     <script src="https://kit.fontawesome.com/b704c00148.js" crossorigin="anonymous"></script>
     <link rel="stylesheet" href="style.css">
+    <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/swiper@11/swiper-bundle.min.css" />
     <title>Haley Higa</title>
 </head>
 
@@ -72,34 +73,46 @@
 
     </div>
 
-    <div class="projects-container">
-        <div class="project-card fade-in">
-          <img src="ai-pathfinder.png" alt="AI-Doghouse-Pathfinder">
-          <h3>AI Doghouse Pathfinder</h3>
-          <p>Utilizes A* Search Algorithm and Python Gymnasium</p>
-          <a href="https://github.com/haleyhiga/AI-Doghouse-Pathfinder" target="_blank">View Project</a>
-        </div>
+    <div class="swiper projects-container">
+        <div class="swiper-wrapper">
+          
+          <div class="swiper-slide">
+            <div class="project-card fade-in">
+              <img src="ai-pathfinder.png" alt="AI-Doghouse-Pathfinder">
+              <h3>AI Doghouse Pathfinder</h3>
+              <p>Utilizes A* Search Algorithm and Python Gymnasium</p>
+              <a href="https://github.com/haleyhiga/AI-Doghouse-Pathfinder" target="_blank">View Project</a>
+            </div>
+          </div>
       
-        <div class="project-card fade-in">
-          <img src="neural-network.jpg" alt="Heart-Failure-Neural-Network">
-          <h3>Heart Failure Prediction Neural Network</h3>
-          <p>TensorFlow, Keras, Health Data Analysis</p>
-          <a href="https://github.com/haleyhiga/Heart-Failure-Prediction-Neural-Network">View Project</a>
-        </div>
+          <div class="swiper-slide">
+            <div class="project-card fade-in">
+              <img src="neural-network.jpg" alt="Heart-Failure-Neural-Network">
+              <h3>Heart Failure Prediction Neural Network</h3>
+              <p>TensorFlow, Keras, Health Data Analysis</p>
+              <a href="https://github.com/haleyhiga/Heart-Failure-Prediction-Neural-Network">View Project</a>
+            </div>
+          </div>
       
-        <div class="project-card fade-in">
-          <img src="social-network.jpg" alt="Mock-Social-Network">
-          <h3>Simulated Social Network</h3>
-          <p>SQLite, Bash, Python</p>
-          <a href="https://github.com/haleyhiga/Social-Network-Database">View Project</a>
+          <div class="swiper-slide">
+            <div class="project-card fade-in">
+              <img src="social-network.jpg" alt="Mock-Social-Network">
+              <h3>Simulated Social Network</h3>
+              <p>SQLite, Bash, Python</p>
+              <a href="https://github.com/haleyhiga/Social-Network-Database">View Project</a>
+            </div>
+          </div>
+      
+        </div>
 
-        </div>
+        <div class="swiper-button-next"></div>
+        <div class="swiper-button-prev"></div>
+        <div class="swiper-pagination"></div> 
+ 
+
       </div>
-    
-    </div>
-
-
-
+      </div>
+ 
     <div class="contact-section fade-in" id="contact">
         <h1>Contact</h1>
         <form action="https://formspree.io/f/xbloaryw" method="POST">
@@ -132,6 +145,9 @@
           </a>
       </footer>
 
+      <div class="mouse-trail"></div>
+
+<script src="https://cdn.jsdelivr.net/npm/swiper@11/swiper-bundle.min.js"></script>
 <script src="app.js"></script>
 </body>
 </html>

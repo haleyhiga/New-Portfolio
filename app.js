@@ -1,7 +1,7 @@
 document.addEventListener("DOMContentLoaded", function () {
     
-    const text = "Hi, I'm Haley"; // The text you want to display
-    const speed = 100; // Typing speed in milliseconds
+    const text = "Hi, I'm Haley"; // text section
+    const speed = 100; // typing speed
     let i = 0;
 
     function typeWriter() {
@@ -12,7 +12,7 @@ document.addEventListener("DOMContentLoaded", function () {
         }
     }
 
-    typeWriter(); // Start the typing animation
+    typeWriter();
 });
 
 
@@ -55,4 +55,36 @@ document.addEventListener("DOMContentLoaded", () => {
 
 document.addEventListener("DOMContentLoaded", () => {
     document.querySelector(".header-section").classList.add("visible");
+  });
+
+  const swiper = new Swiper('.swiper', {
+    slidesPerView: 1,
+    spaceBetween: 40,
+    loop: true,
+    speed: 1000, 
+    autoplay: {
+      delay: 4000,
+      disableOnInteraction: false,
+    },
+    navigation: {
+      nextEl: '.swiper-button-next',
+      prevEl: '.swiper-button-prev',
+    },
+    pagination: {
+      el: '.swiper-pagination',
+      clickable: true,
+    },
+  });
+
+  document.addEventListener('mousemove', (e) => {
+    const trail = document.querySelector('.mouse-trail');
+    const dot = document.createElement('div');
+    dot.classList.add('trail-dot');
+    dot.style.left = `${e.clientX}px`;
+    dot.style.top = `${e.clientY}px`;
+    trail.appendChild(dot);
+  
+    setTimeout(() => {
+      dot.remove();
+    }, 600); 
   });
