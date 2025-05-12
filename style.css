@@ -40,6 +40,13 @@ nav {
     gap: 0.5rem;
 }
 
+.logo base {
+    text-decoration: none; 
+    color: white;          
+    display: flex;
+    align-items: center;
+    gap: 0.5rem;
+}
 
 .logo img {
     height: 40px;
@@ -68,6 +75,17 @@ nav {
     text-transform: uppercase;
     transition: color 0.3s ease;
 }
+
+
+
+.nav-links li base {
+    text-decoration: none;
+    color: white;
+    font-weight: bold;
+    text-transform: uppercase;
+    transition: color 0.3s ease;
+}
+
 
 .nav-links li a:hover {
     color: lightgray;
@@ -350,7 +368,26 @@ nav {
     font-weight: bold;
 }
 
+.project-card base {
+    text-decoration: none;
+    background-color: grey;
+    color: black;
+    border-radius: 4px;
+    border: solid;
+    border-bottom: 4px solid black;
+    text-transform: uppercase;
+    cursor: pointer;
+    padding: 0.5rem 1rem;
+    font-weight: bold;
+}
+
 .project-card a:hover {
+    transform: scale(1.04);
+    box-shadow: 0 8px 20px rgba(0, 0, 0, 0.3);
+    font-weight: bold;
+}
+
+.project-card base:hover {
     transform: scale(1.04);
     box-shadow: 0 8px 20px rgba(0, 0, 0, 0.3);
     font-weight: bold;
@@ -489,6 +526,10 @@ footer a {
     text-decoration: none;
 }
 
+footer base {
+    color: white;
+    text-decoration: none;
+}
 .fa-brands {
     color: black;
     transition: transform 0.3s;
