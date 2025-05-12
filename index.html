@@ -5,6 +5,7 @@
     <meta http-equiv="X-UA-Compatible" content="IE=edge">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <link rel="icon" type="image/x-icon" href="haley-logo.jpg">
+    <script src="https://unpkg.com/vue@3"></script>
     <script src="https://kit.fontawesome.com/b704c00148.js" crossorigin="anonymous"></script>
     <link rel="stylesheet" href="style.css">
     <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/swiper@11/swiper-bundle.min.css" />
@@ -38,23 +39,30 @@
         <a id="contact-button" href="#contact">Contact Me</a>
     </div>
 
-
-    <div class="about-section" id="about">
+    <div id="about" class="about-section" v-cloak>
         <h1>About Me</h1>
+      
+        <div class="about-menu">
+          <h4 :class="{ active: tab === 'education' }" @click="tab = 'education'">Education</h4>
+          <h4 :class="{ active: tab === 'personal' }" @click="tab = 'personal'">Personal</h4>
+        </div>
+      
         <div class="about-content fade-in">
-          <img src="haley.png" alt="A picture of me" id="about-image">
+          <img :src="aboutData[tab].image" :alt="tab" id="about-image" />
           <div class="about-text">
-            <h4>I'm a Computer Science major at Utah Tech University with a minor in Information Technology and a 3.91 GPA. My interests lie at the intersection of software engineering, data analytics, artificial intelligence, machine learning, and database systems. I've built a strong foundation in Python, SQL, and algorithm design, and I enjoy creating scalable, data-driven solutions that solve real-world problems.
-
-                I'm an AWS Certified Cloud Practitioner and CompTIA Security+ certified, which reflects my commitment to both cloud technologies and cybersecurity fundamentals. I'm currently seeking opportunities in software development, data engineering, or AI-focused roles where I can contribute meaningfully and continue growing in a fast-paced environment.
-                
-                Outside of tech, I enjoy snowboarding, fishing, and surfing—activities that have taught me focus, discipline, and adaptability, all of which I bring into my professional work. </h4>
+            <h4>{{ aboutData[tab].text }}</h4>
+      
+            <ul v-if="tab === 'education'">
+              <li>B.S. in Computer Science, GPA 3.91 (May 2025)</li>
+              <li>Magna Cum Laude, IT Minor</li>
+              <li>President's List (5 semesters)</li>
+              <li>Students of Computer Science Club</li>
+            </ul>
+      
             <div class="skills-container">
-              <div>Python</div>
-              <div>Javascript</div>
-              <div>C++</div>
-              <div>SQL</div>
-              <div>Data Science</div>
+                <div v-if="tab === 'education'" v-for="skill in skills" :key="skill">{{ skill }}</div>
+                <div v-else v-for="hobby in hobbies" :key="hobby">{{ hobby }}</div>
+              </div>
             </div>
           </div>
         </div>
@@ -107,10 +115,10 @@
 
         <div class="swiper-button-next"></div>
         <div class="swiper-button-prev"></div>
-        <div class="swiper-pagination"></div> 
  
 
       </div>
+      <div class="swiper-pagination"></div> 
       </div>
  
     <div class="contact-section fade-in" id="contact">

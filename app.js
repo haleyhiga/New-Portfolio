@@ -1,3 +1,5 @@
+
+
 document.addEventListener("DOMContentLoaded", function () {
     
     const text = "Hi, I'm Haley"; // text section
@@ -88,3 +90,32 @@ document.addEventListener("DOMContentLoaded", () => {
       dot.remove();
     }, 600); 
   });
+
+  const { createApp, ref } = Vue;
+
+  createApp({
+    setup() {
+      const tab = ref('education');
+  
+      const aboutData = {
+        education: {
+          image: 'haley.png',
+          text: "Hi! I'm Haley, thanks for checking out my portfolio!"
+        },
+        personal: {
+          image: 'haley_hobby.jpeg', 
+          text: "Hi! I'm Haley, thanks for checking out my portfolio! I was born and raised on Oahu, Hawaii.  Besides tech, my main interests include the outdoors.  I love to snowboard, surf, fish, and go to the beach.  I also occasionally will play pickleball with my friends and family."
+        }
+      };
+  
+      const skills = ['Python', 'Javascript', 'C++', 'SQL', 'Data Science'];
+      const hobbies = ['Surfing', 'Snowboarding', 'Fishing', 'Hiking', 'Beach'];
+  
+      return {
+        tab,
+        aboutData,
+        skills,
+        hobbies
+      };
+    }
+  }).mount('#about');
