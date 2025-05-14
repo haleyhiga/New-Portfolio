@@ -235,6 +235,7 @@ nav {
     border: 1px solid white;
     border-radius: 4px;
     transition: background-color 0.3s ease;
+    cursor: pointer;
   }
 
 
@@ -260,9 +261,16 @@ nav {
     box-shadow: 0 8px 20px rgba(0,0,0,0.3);
 }
 
-.about-text {
+div.about-text {
     flex: 1;
     font-family: Arial, Helvetica, sans-serif;
+    font-size: 1.1rem;
+    line-height: 1.5;
+    color: white;
+    text-align: left;
+    padding: 1rem;
+   
+
 }
 
 .skills-container {
@@ -302,7 +310,12 @@ nav {
     margin-top: 1rem;
     padding:0.5rem;
     text-transform: uppercase;
+    cursor:pointer;
 }
+
+
+
+
 .projects-container {
     margin: 0 auto;
   }
@@ -505,10 +518,6 @@ nav {
 
 
 
-
-
-
-
 /* END OF CONTACT SECTION */
 
 /* FOOTER */
@@ -662,4 +671,32 @@ h1::after {
 
   [v-cloak] {
     display: none;
+  }
+
+
+/* No projects message styling */
+.no-projects-message {
+    text-align: center;
+    padding: 40px 0;
+    width: 100%;
+    color: #666;
+    font-style: italic;
+  }
+  
+  .no-projects-message p {
+    font-size: 1.2rem;
+    margin: 0;
+  }
+
+  .projects-container {
+    min-height: 400px;
+    position: relative;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+  }
+  
+
+  .swiper-wrapper {
+    min-height: 350px;
   }
